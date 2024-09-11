@@ -1,14 +1,11 @@
 # Project
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repository contains the container image Docker files and scripts used to build the defualt Azue DevOps Agent or GitHub Runner container image for the Azure Verified Modules for CI/CD Agents and Runners.
 
-As the maintainer of this project, please make a few updates:
+You can find the Azure Verified Modules for CI/CD Agents and Runners here:
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+- Bicep: https://github.com/Azure/bicep-registry-modules/tree/main/avm/ptn/dev-ops/cicd-agents-and-runners
+- Terraform: https://github.com/Azure/terraform-azurerm-avm-ptn-cicd-agents-and-runners
 
 ## Contributing
 
