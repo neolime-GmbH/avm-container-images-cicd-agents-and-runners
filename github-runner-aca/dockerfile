@@ -29,9 +29,6 @@ RUN apt-get update \
         
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
-RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq \
-    && chmod +x /usr/bin/yq
-
 RUN groupadd -g 121 runner \
   && useradd -mr -d /home/runner -u 1001 -g 121 runner \
   && usermod -aG sudo runner \
