@@ -6,9 +6,19 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
 
 RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    build-essential \
+    pkg-config \
+  && rm -rf /var/lib/apt/lists/*
+
+ # (Optional) Lade die neueste yq-Binärdatei von GitHub herunter und mache sie ausführbar
+RUN curl -L -o /usr/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 \
+  && chmod +x /usr/bin/yq
+
+RUN apt-get update \
 && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        curl \
         jq \
         git \
         dumb-init \
