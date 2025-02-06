@@ -7,7 +7,7 @@ RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
 
 RUN apt-get update && \
   apt-get install -y --no-install-recommends \
-    ca-certificates curl build-essential pkg-config jq git dumb-init sudo \
+    ca-certificates curl build-essential pkg-config gnupg jq git dumb-init sudo \
     iputils-ping libcurl4 libunwind8 netcat ruby unzip dnsutils nodejs npm \
     make findutils sed && \
   rm -rf /var/lib/apt/lists/*
